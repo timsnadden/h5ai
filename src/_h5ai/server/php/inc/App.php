@@ -18,7 +18,7 @@ class App {
 	public function __construct($app_abs_path, $app_abs_href, $abs_href) {
 
 		$this->app_abs_path = normalize_path($app_abs_path);
-		$this->root_abs_path = normalize_path(dirname($this->app_abs_path));
+		$this->root_abs_path = $_SERVER['DOCUMENT_ROOT'];
 
 		$this->app_abs_href = normalize_path($app_abs_href, true);
 		$this->root_abs_href = normalize_path(dirname($this->app_abs_href), true);
